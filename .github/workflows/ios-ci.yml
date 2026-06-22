@@ -11,8 +11,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  XCODE_VERSION: "16.2"
   SCHEME: "LemonTree"
+  DESTINATION: "platform=iOS Simulator,name=iPhone 16 Pro"
 
 jobs:
   # ─── Build and Test ──────────────────────────────────────────────
@@ -25,21 +25,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
-
-      - name: Show Xcode version
-        run: xcodebuild -version
+      - name: Select latest Xcode
+        run: |
+          LATEST_XCODE=$(ls -d /Applications/Xcode*.app 2>/dev/null | sort -r | head -1)
+          if [ -n "$LATEST_XCODE" ]; then
+            sudo xcode-select -s "$LATEST_XCODE"
+          fi
+          echo "Selected: $(xcode-select -p)"
+          echo "Xcode: $(xcodebuild -version | head -1)"
+          echo "SDK: $(xcodebuild -version -sdk iphonesimulator SDKVersion 2>/dev/null)"
+          echo "Latest OS: $(xcrun simctl list runtimes 'iOS-*-*' 2>/dev/null | sort -r | head -1 | grep -oE '[0-9]+\.[0-9]+' | head -1 || echo 'unknown')"
 
       - name: List available simulators
-        run: xcrun simctl list devices available 2>/dev/null | head -20
-
-      - name: Resolve Package Dependencies
-        run: |
-          xcodebuild -resolvePackageDependencies \
-            -project LemonTree.xcodeproj \
-            -scheme "${{ env.SCHEME }}" \
-            -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages
+        run: xcrun simctl list devices available 2>/dev/null | grep -E "iPhone.*(Pro|16)" | head -10
 
       - name: Build (Debug)
         run: |
@@ -48,7 +46,7 @@ jobs:
             -project LemonTree.xcodeproj \
             -scheme "${{ env.SCHEME }}" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
+            -destination "${{ env.DESTINATION }}" \
             -configuration Debug \
             -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages \
             CODE_SIGNING_ALLOWED=NO 2>&1
@@ -60,7 +58,7 @@ jobs:
             -project LemonTree.xcodeproj \
             -scheme "${{ env.SCHEME }}" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
+            -destination "${{ env.DESTINATION }}" \
             -configuration Debug \
             -only-testing:"LemonTreeTests" \
             -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages \
@@ -73,7 +71,7 @@ jobs:
             -project LemonTree.xcodeproj \
             -scheme "${{ env.SCHEME }}" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
+            -destination "${{ env.DESTINATION }}" \
             -configuration Debug \
             -only-testing:"LemonTreeUITests" \
             -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages \
