@@ -1,0 +1,92 @@
+name: iOS Deploy to TestFlight
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+    inputs:
+      increment_build:
+        description: "Auto-increment build number before uploading"
+        required: false
+        default: true
+        type: boolean
+
+env:
+  XCODE_VERSION: "16.2"
+  SCHEME: "LemonTree"
+
+jobs:
+  build-and-deploy:
+    name: Build & Upload to TestFlight
+    runs-on: macos-15
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_${{ env.XCODE_VERSION }}.app
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # ── Import signing certificates ──────────────────────────────
+      - name: Import Apple Certificate (Dev)
+        uses: apple-actions/import-codesign-certs@v3
+        with:
+          p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+          p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+
+      # ── Import provisioning profile ──────────────────────────────
+      - name: Import Provisioning Profile
+        run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          echo "${{ secrets.PROVISIONING_PROFILE_BASE64 }}" \
+            | base64 -d \
+            > ~/Library/MobileDevice/Provisioning\ Profiles/LemonTree.mobileprovision
+
+      # ── Increment build number ──────────────────────────────────
+      - name: Increment Build Number
+        if: github.event.inputs.increment_build != 'false'
+        run: |
+          agvtool next-version -all
+          echo "BUILD_NUMBER=$(agvtool what-version -terse)" >> $GITHUB_ENV
+
+      # ── Archive ─────────────────────────────────────────────────
+      - name: Archive App
+        run: |
+          xcodebuild clean archive \
+            -project LemonTree.xcodeproj \
+            -scheme "${{ env.SCHEME }}" \
+            -configuration Release \
+            -archivePath ${{ runner.temp }}/LemonTree.xcarchive \
+            -allowProvisioningUpdates \
+            CODE_SIGN_STYLE=Manual \
+            PROVISIONING_PROFILE_SPECIFIER="LemonTree AppStore"
+
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath ${{ runner.temp }}/LemonTree.xcarchive \
+            -exportPath ${{ runner.temp }}/export \
+            -exportOptionsPlist .github/ExportOptions.plist \
+            -allowProvisioningUpdates
+
+      # ── Upload to TestFlight ────────────────────────────────────
+      - name: Upload to TestFlight
+        run: |
+          xcrun altool --upload-app \
+            -f ${{ runner.temp }}/export/LemonTree.ipa \
+            -t ios \
+            -u ${{ secrets.APPLE_ID }} \
+            -p ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+
+      # ── Upload artifact ─────────────────────────────────────────
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LemonTree-${{ env.BUILD_NUMBER || github.ref_name }}.ipa
+          path: ${{ runner.temp }}/export/LemonTree.ipa
+          retention-days: 30

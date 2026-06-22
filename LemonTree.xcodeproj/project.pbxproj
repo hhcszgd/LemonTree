@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		444444444444444444444400 /* LemonTreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111100 /* LemonTreeApp.swift */; };
+		444444444444444444444401 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111101 /* ContentView.swift */; };
+		444444444444444444444402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111102 /* Assets.xcassets */; };
+		444444444444444444444403 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111111111111111111111103 /* Preview Assets.xcassets */; };
+		555555555555555555555500 /* LemonTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222222222222222222222200 /* LemonTreeTests.swift */; };
+		666666666666666666666600 /* LemonTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333333333333333333333300 /* LemonTreeUITests.swift */; };
+		666666666666666666666601 /* LemonTreeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333333333333333333333301 /* LemonTreeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000001 /* LemonTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LemonTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000002 /* LemonTreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonTreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000003 /* LemonTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		111111111111111111111100 /* LemonTreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeApp.swift; sourceTree = "<group>"; };
+		111111111111111111111101 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		111111111111111111111102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		111111111111111111111103 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		111111111111111111111104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		222222222222222222222200 /* LemonTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeTests.swift; sourceTree = "<group>"; };
+		222222222222222222222201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333333333333333333333300 /* LemonTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeUITests.swift; sourceTree = "<group>"; };
+		333333333333333333333301 /* LemonTreeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LemonTreeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		333333333333333333333302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		888888888888888888888801 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		999999999999999999999901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBBBBBBBBBBBBBBBBBBBBBBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		777777777777777777777700 = {
+			isa = PBXGroup;
+			children = (
+				777777777777777777777701 /* LemonTree */,
+				777777777777777777777702 /* LemonTreeTests */,
+				777777777777777777777703 /* LemonTreeUITests */,
+				777777777777777777777704 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		777777777777777777777701 /* LemonTree */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111100 /* LemonTreeApp.swift */,
+				111111111111111111111101 /* ContentView.swift */,
+				111111111111111111111102 /* Assets.xcassets */,
+				111111111111111111111104 /* Info.plist */,
+				777777777777777777777706 /* Preview Content */,
+			);
+			path = LemonTree;
+			sourceTree = "<group>";
+		};
+		777777777777777777777702 /* LemonTreeTests */ = {
+			isa = PBXGroup;
+			children = (
+				222222222222222222222200 /* LemonTreeTests.swift */,
+				222222222222222222222201 /* Info.plist */,
+			);
+			path = LemonTreeTests;
+			sourceTree = "<group>";
+		};
+		777777777777777777777703 /* LemonTreeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				333333333333333333333300 /* LemonTreeUITests.swift */,
+				333333333333333333333301 /* LemonTreeUITestsLaunchTests.swift */,
+				333333333333333333333302 /* Info.plist */,
+			);
+			path = LemonTreeUITests;
+			sourceTree = "<group>";
+		};
+		777777777777777777777704 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000001 /* LemonTree.app */,
+				000000000000000000000002 /* LemonTreeTests.xctest */,
+				000000000000000000000003 /* LemonTreeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		777777777777777777777706 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				111111111111111111111103 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDDDDDDDDDDDDDDDDDDDDDDD /* LemonTree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1B1B1B1B1B1B1B1B1B1B1B1 /* Build configuration list for PBXNativeTarget "LemonTree" */;
+			buildPhases = (
+				888888888888888888888800 /* Sources */,
+				888888888888888888888801 /* Frameworks */,
+				888888888888888888888802 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LemonTree;
+			productName = LemonTree;
+			productReference = 000000000000000000000001 /* LemonTree.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEEEEEEEEEEEEEEEEEEEEEEE /* LemonTreeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1C1C1C1C1C1C1C1C1C1C1C1 /* Build configuration list for PBXNativeTarget "LemonTreeTests" */;
+			buildPhases = (
+				999999999999999999999900 /* Sources */,
+				999999999999999999999901 /* Frameworks */,
+				999999999999999999999902 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEADBEEFDEADBEEFDEADBEEF /* PBXTargetDependency */,
+			);
+			name = LemonTreeTests;
+			productName = LemonTreeTests;
+			productReference = 000000000000000000000002 /* LemonTreeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFFFFFFFFFFFFFFFFFFFFFFF /* LemonTreeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1D1D1D1D1D1D1D1D1D1D1D1 /* Build configuration list for PBXNativeTarget "LemonTreeUITests" */;
+			buildPhases = (
+				AAAAAAAAAAAAAAAAAAAAAAAA /* Sources */,
+				BBBBBBBBBBBBBBBBBBBBBBBB /* Frameworks */,
+				CCCCCCCCCCCCCCCCCCCCCCCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAFEBABECAFEBABECAFEBABE /* PBXTargetDependency */,
+			);
+			name = LemonTreeUITests;
+			productName = LemonTreeUITests;
+			productReference = 000000000000000000000003 /* LemonTreeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1E1E1E1E1E1E1E1E1E1E1E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					DDDDDDDDDDDDDDDDDDDDDDDD = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					EEEEEEEEEEEEEEEEEEEEEEEE = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = DDDDDDDDDDDDDDDDDDDDDDDD;
+					};
+					FFFFFFFFFFFFFFFFFFFFFFFF = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = DDDDDDDDDDDDDDDDDDDDDDDD;
+					};
+				};
+			};
+			buildConfigurationList = A1A1A1A1A1A1A1A1A1A1A1A1 /* Build configuration list for PBXProject "LemonTree" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "en-US";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en-US,
+				Base,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = 777777777777777777777700;
+			productRefGroup = 777777777777777777777704 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDDDDDDDDDDDDDDDDDDDDDDD /* LemonTree */,
+				EEEEEEEEEEEEEEEEEEEEEEEE /* LemonTreeTests */,
+				FFFFFFFFFFFFFFFFFFFFFFFF /* LemonTreeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		888888888888888888888802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				444444444444444444444402 /* Assets.xcassets in Resources */,
+				444444444444444444444403 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		999999999999999999999902 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCCCCCCCCCCCCCCCCCCCCCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		888888888888888888888800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				444444444444444444444400 /* LemonTreeApp.swift in Sources */,
+				444444444444444444444401 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		999999999999999999999900 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555555555555555555555500 /* LemonTreeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAAAAAAAAAAAAAAAAAAAAAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666666666666666666666600 /* LemonTreeUITests.swift in Sources */,
+				666666666666666666666601 /* LemonTreeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEADBEEFDEADBEEFDEADBEEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDDDDDDDDDDDDDDDDDDDDDDD /* LemonTree */;
+			targetProxy = FEEDBEEFFEEDBEEFFEEDBEEF /* PBXContainerItemProxy */;
+		};
+		CAFEBABECAFEBABECAFEBABE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDDDDDDDDDDDDDDDDDDDDDDD /* LemonTree */;
+			targetProxy = DEADC0DEDEADC0DEDEADC0DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		FEEDBEEFFEEDBEEFFEEDBEEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1E1E1E1E1E1E1E1E1E1E1E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDDDDDDDDDDDDDDDDDDDDDDD;
+			remoteInfo = LemonTree;
+		};
+		DEADC0DEDEADC0DEDEADC0DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1E1E1E1E1E1E1E1E1E1E1E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDDDDDDDDDDDDDDDDDDDDDDD;
+			remoteInfo = LemonTree;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin XCBuildConfiguration section */
+		A0A0A0A0A0A0A0A0A0A0A0A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0B0B0B0B0B0B0B0B0B0B0B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0C0C0C0C0C0C0C0C0C0C0C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhcszgd.LemonTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LemonTree.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LemonTree";
+			};
+			name = Debug;
+		};
+		D0D0D0D0D0D0D0D0D0D0D0D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhcszgd.LemonTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LemonTree.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LemonTree";
+			};
+			name = Release;
+		};
+		E0E0E0E0E0E0E0E0E0E0E0E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhcszgd.LemonTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LemonTree;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LemonTree.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LemonTree";
+			};
+			name = Debug;
+		};
+		F0F0F0F0F0F0F0F0F0F0F0F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhcszgd.LemonTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LemonTree;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LemonTree.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LemonTree";
+			};
+			name = Release;
+		};
+		ABCABCABCABCABCABCABCABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LemonTree/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhcszgd.LemonTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEFDEFDEFDEFDEFDEFDEFDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LemonTree/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhcszgd.LemonTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1A1A1A1A1A1A1A1A1A1A1A1 /* Build configuration list for PBXProject "LemonTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0A0A0A0A0A0A0A0A0A0A0A0 /* Debug */,
+				B0B0B0B0B0B0B0B0B0B0B0B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1B1B1B1B1B1B1B1B1B1B1B1 /* Build configuration list for PBXNativeTarget "LemonTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABCABCABCABCABCABCABCABC /* Debug */,
+				DEFDEFDEFDEFDEFDEFDEFDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1C1C1C1C1C1C1C1C1C1C1C1 /* Build configuration list for PBXNativeTarget "LemonTreeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0C0C0C0C0C0C0C0C0C0C0C0 /* Debug */,
+				D0D0D0D0D0D0D0D0D0D0D0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1D1D1D1D1D1D1D1D1D1D1D1 /* Build configuration list for PBXNativeTarget "LemonTreeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0E0E0E0E0E0E0E0E0E0E0E0 /* Debug */,
+				F0F0F0F0F0F0F0F0F0F0F0F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1E1E1E1E1E1E1E1E1E1E1E1 /* Project object */;
+}
