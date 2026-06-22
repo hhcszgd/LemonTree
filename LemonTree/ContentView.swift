@@ -27,6 +27,8 @@ struct ContentView: View {
                 Text("iOS CI/CD Ready")
                     .font(.title3)
                     .foregroundStyle(.secondary)
+                Text("CI Verified")
+                    .font(.caption).fontWeight(.semibold).foregroundStyle(.green)
 
                 Divider()
                     .padding(.horizontal, 60)
@@ -74,12 +76,29 @@ struct ContentView: View {
 
                 Spacer()
 
-                Text("Built with GitHub Actions CI/CD")
+                HStack(spacing: 4) {
+                    Image(systemName: "checkmark.seal.fill").foregroundStyle(.green).font(.caption)
+                    Text("PR #\(ProcessInfo.processInfo.processIdentifier) • CI/CD Active").font(.caption)
+                }
                     .font(.caption)
                     .foregroundStyle(.tertiary)
                     .padding(.bottom, 8)
             }
             .navigationTitle("Home")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        withAnimation(.spring) {
+                            items.removeAll()
+                            itemCount = 0
+                        }
+                    } label: {
+                        Image(systemName: "trash")
+                            .symbolVariant(.circle)
+                    }
+                    .disabled(items.isEmpty)
+                }
+            }
         }
     }
 }
