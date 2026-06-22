@@ -48,7 +48,7 @@ jobs:
             -project LemonTree.xcodeproj \
             -scheme "${{ env.SCHEME }}" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
             -configuration Debug \
             -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages \
             CODE_SIGNING_ALLOWED=NO 2>&1
@@ -60,7 +60,7 @@ jobs:
             -project LemonTree.xcodeproj \
             -scheme "${{ env.SCHEME }}" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
             -configuration Debug \
             -only-testing:"LemonTreeTests" \
             -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages \
@@ -73,7 +73,7 @@ jobs:
             -project LemonTree.xcodeproj \
             -scheme "${{ env.SCHEME }}" \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest' \
+            -destination 'platform=iOS Simulator,name=iPhone 16 Pro' \
             -configuration Debug \
             -only-testing:"LemonTreeUITests" \
             -clonedSourcePackagesDirPath ~/Library/Caches/com.apple.dt.Xcode/SourcePackages \
